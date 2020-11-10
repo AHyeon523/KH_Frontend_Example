@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> CSS 실습 </title>
+        <link href="./my style.css"
+            rel="stylesheet"
+            type="text/css">
+        <style>
+            .font-style {
+                font-size: 2rem;
+                color:slateblue
+            }
+            #p1 {
+                padding-bottom: 100px;
+            }
+            #container li { 
+                color: cornflowerblue;
+            }
+            #ct-h1 + * {
+                color: darkcyan;
+            }
+            #ct-h1 ~ p {
+                color: brown;
+            }
+            a[href='#문서제목'] {
+                background: coral;
+            }
+            li:nth-child(2n-1){
+                background-color: khaki;
+            }
+            /* 1.문서 내부에 지정
+            p {
+                background-color: palevioletred;
+                color: peachpuff;
+                padding: 20px;
+            }*/
+        </style>
+    </head>
+
+    <body>
+        <!--2.인라인 스타일 지정-->
+        <p id="p1" class="paragraph-style font-style">
+            What is Lorem Ipsum?
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        </p>
+        <p>
+            What is Lorem Ipsum?
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        </p>
+        <p class="paragraph-style">
+            What is Lorem Ipsum?
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        </p>
+        <h1> 제목 </h1>
+        <div id="container">
+            <h1 id="ct-h1">title</h1>
+            <p>문단같은거</p>
+            <ul>
+                <li>1 depth - A
+                    <ul>
+                        <li>2depth - A</li>
+                        <li>2depth - A</li>
+                        <h1>갑자기 제목</h1>
+                    </ul>
+                </li>
+                <li>1 depth - B
+                    <ul>
+                        <li>2depth - B</li>
+                        <li>2depth - B</li>
+                        <li>2depth - B</li>
+                    </ul>
+                </li>
+            </ul>
+
+        </div>
+        <h1>문서 목록</h1>
+        <ul>
+            <li><a href="#문서제목1">문서제목1</a></li>
+            <li><a href="#문서제목2">문서제목1</a></li>
+            <li><a href="#문서제목3">문서제목1</a></li>
+            <li><a href="#문서제목4">문서제목1</a></li>
+
+        </ul>
+    </body>
+</html>

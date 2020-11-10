@@ -134,11 +134,11 @@ dd - 설명
 img 태그
 <img src = "이미지url(또는 파일의 경로)">
 
-. - 현재 위치  (./이미지이름.jpg)
-src - 이미지 url, 파일 경로
-alt - 대체 문구 (alternative)
-width - 너비
-height - 높이
+- . - 현재 위치  (./이미지이름.jpg)
+- src - 이미지 url, 파일 경로
+- alt - 대체 문구 (alternative)
+- width - 너비
+- height - 높이
 
 # 6. a 태그
 <a href="링크"> 링크이름 </a>
@@ -147,7 +147,7 @@ height - 높이
 - target : 링크가 표시될 방법
 - download : 링크의 리소스를 다운로드
   
-  target 속성
+-  target 속성
   - _blank  -> 새 탭에서 열림
   - self : 기본 값
-  - 
+  
