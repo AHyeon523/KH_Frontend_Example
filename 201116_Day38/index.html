@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>브라우저 제어하기</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.2.2/purify.min.js" 
+        integrity="sha512-T6jx0SL5artICbQxeQCg3iToWGEuWM6P2XjNxP1vMI6fNtgIb3dnVD5gpd/pkQKoMfi1ygq5ezv/Z2VB3lLGtw==" 
+        crossorigin="anonymous">
+        </script>
+        <style>
+            .box {
+                width: 100px;
+                height: 100px;
+                background-color: aquamarine;
+            }
+            .b1 {
+                background-color: coral;
+            }
+            .b2 {
+                background-color: cornflowerblue;
+            }
+            .b3 {
+                background-color: goldenrod;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- <script>
+            function handleClick() {
+                alert('클릭했음')
+            }
+        </script>
+        <div ondblclick="handleClick()" class="box">._.</div> 
+        박스 클릭했을 시 '클릭했음' 알림창 뜨게 하는 것-->
+        <div id="boxbox" class="box">._.</div>
+        <script>
+            const box = document.querySelector('#boxbox')
+            // document.body.addEventListener('kepress', e => {
+            //     const currentValue = box.innerText
+            //     box.innerText = currentValue + e.key
+            // }) 박스안에 글 넣을 수 있게 하는 것
+            let x = 0
+            let y = 0
+            document.body.addEventListener('keydown', e => {
+                switch(e.key) {
+                    case 'ArrowUp':
+                        console.log('위')
+                        y -= 5
+                        break;
+                    case 'ArrowDown':
+                        console.log('아래')
+                        y += 5
+                        break;
+                    case 'ArrowLeft':
+                        console.log('왼쪽')
+                        x -= 5
+                        break;
+                    case 'ArrowRight':
+                        console.log('오른쪽')
+                        x += 5
+                        break;
+                }
+                box.style.transform = `translate3d(${x}px, ${y}px, 0)`
+            }) 
+
+        </script>
+        <div class="box b1">box1</div>
+        <div class="box b2">box2</div>
+        <div class="box b3">box3</div>
+    </body>
+</html>
