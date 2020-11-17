@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>flex!</title>
+    <style>
+        html, body {
+            margin: 0;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .flex-container {
+            display: flex;  /*옆으로 좌르륵 다 붙네*/
+            width: 100vw;
+            height: 300px;
+            background-color: beige;
+            justify-content: space-between;
+            /* 박스가 양 옆으로 하나씩 붙는다 */
+        }
+
+        .flex-item {
+            /* width: 100px;
+            height: 100px; */
+            flex: 1 1 0;
+            /*[늘어날 때 비율][줄어날 때 비율][상자 갯수에 맞춰 자동으로 박스를 꽉 채움]*/
+            padding: 30px;
+        }
+
+        .flex-item > h1, p {
+            margin: 0;
+        }
+
+        .flex-item > h1 {
+            margin-bottom: 1rem;
+        }
+        .c1 { background: coral;}
+        .c2 { background: cornflowerblue;}
+        .c3 { background: crimson;}
+    </style>
+    </head>
+    <body>
+        <div class="flex-container">
+            <div class="flex-item c1">
+                <h1>Learn more.</h1>
+                <p>Cras elementum sapien eu ullamcorper elementum. Aenean ultricies justo vitae nibh dictum rutrum. Donec scelerisque ligula purus, a commodo augue viverra in.</p>
+            </div>
+            <div class="flex-item c2">item2</div>
+            <div class="flex-item c3">item3</div>
+        </div>
+    </body>
+</html>
