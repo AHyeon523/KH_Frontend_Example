@@ -69,7 +69,7 @@ IoC(Inversion of Control)
 
 기본적인 레이어 구성
 
-![1.png](assets/1.png)
+![spring.jpg](spring.jpg)
 
 - Controller(RestController)
   - 요청과 응답에 대한 처리 수행
